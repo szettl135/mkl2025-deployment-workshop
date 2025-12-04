@@ -10,6 +10,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 # macht es aber schwerer zum debuggen
 RUN apt update && apt upgrade -y
 
+RUN apt install -y curl
+
 # Jeder weitere Befehl geht von diesem dir aus
 WORKDIR /usr/src/app
 
