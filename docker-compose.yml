@@ -32,7 +32,7 @@ services:
       - TZ=UTC
     restart: unless-stopped
     healthcheck:
-      test: ["mysql -uroot -p123root -e 'SELECT * FROM mysql.help_topic'"]
+      test: "mysql -uroot -p123root -e 'SELECT * FROM mysql.help_topic'"
       interval: 1m30s
       timeout: 30s
       retries: 5
